@@ -2,18 +2,24 @@
     {
         "name": "Personal Website",
         "description": "A Website with information about myself and a list of my projects",
-        "created": "May 2024",
+        "date": "May 2024",
+        "tech": "JavaScript, React, GitHub Pages",
         "links": [
             { "title": "Website Link", "site": "https://elgan65536.github.io" },
-            { "title": "Source Codes", "site": "https://github.com/elgan65536/elgan65536.github.io" }
+            { "title": "Source Code", "site": "https://github.com/elgan65536/elgan65536.github.io" }
         ],
-        "images": [ ]
+        "images": [
+            { "src": "Lheader.png" },
+            { "src": "logo192.png" },
+            { "src": "favicon.ico" }
+        ]
     },
+
     {
         "name": "More projects will be added soon",
         "description": "",
-        "created": "",
+        "date": "",
         "links": [ ],
-        "images": [ ]
+        "images": [ { "src": "Lheader.png" } ]
     }
 ]

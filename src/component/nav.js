@@ -1,10 +1,10 @@
 import "./nav.css";
 
-const PAGES = ["Home", "Projects"];
+export const PAGES = ["Home", "Projects"];
 
 export function NavBar({ page, setPage }) {
     return (
-        <div className="Nav" style={{ backgroundImage: "url(Lheader.png)" }}>
+        <nav className="Nav" style={{ backgroundImage: "url(Lheader.png)" }}>
             {PAGES.map((pageName) => (
                 <span
                     style={{ padding: "10px" }}
@@ -18,6 +18,6 @@ export function NavBar({ page, setPage }) {
                 </span>
             ))}
             <br /> This site is currently unfinished.
-        </div>
+        </nav>
     );
 }

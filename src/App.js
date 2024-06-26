@@ -1,11 +1,11 @@
 import "./App.css";
 import { Home } from "./component/home";
-import { NavBar } from "./component/nav";
+import { NavBar, PAGES } from "./component/nav";
 import { useState } from "react";
 import { Projects } from "./component/projects";
 
 function App() {
-    const pages = ["home", "projects"];
+    const pages = PAGES.map((page) => page.toLowerCase());
     const selectedPage = window.location.href.split("?")[1];
     const [page, setPage] = useState(
         pages.find((page) => page === selectedPage) ?? "home"
