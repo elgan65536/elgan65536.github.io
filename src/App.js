@@ -6,10 +6,9 @@ import { Projects } from "./component/projects";
 
 function App() {
     const pages = ["home", "projects"];
-    const list = window.location.href.split("/");
-    const last = list[list.length - 1].split("?")[0];
+    const selectedPage = window.location.href.split("?")[1];
     const [page, setPage] = useState(
-        pages.find((page) => page === last) ?? "home"
+        pages.find((page) => page === selectedPage) ?? "home"
     );
     function onPageChange(string) {
         setPage(string);

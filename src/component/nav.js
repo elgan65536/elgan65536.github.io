@@ -13,7 +13,7 @@ export function NavBar({ page, setPage }) {
                     {pageName.toLowerCase() === page.toLowerCase() ? (
                         <b>{pageName}</b>
                     ) : (
-                        <a href={pageName.toLowerCase()}>{pageName}</a>
+                        <a href={`?${pageName.toLowerCase()}`}>{pageName}</a>
                     )}
                 </span>
             ))}
