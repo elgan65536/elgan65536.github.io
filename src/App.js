@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Home } from "./component/home";
+import { NavBar } from "./component/nav";
+import { useState } from "react";
+import { Projects } from "./component/projects";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const pages = ["home", "projects"];
+    const list = window.location.href.split("/");
+    const last = list[list.length - 1].split("?")[0];
+    const [page, setPage] = useState(
+        pages.find((page) => page === last) ?? "home"
+    );
+    function onPageChange(string) {
+        setPage(string);
+    }
+    return (
+        <div>
+            <NavBar page={page} setPage={onPageChange}></NavBar>
+            <div className="App">
+                {page.toLowerCase() === "home" && <Home></Home>}
+                {page.toLowerCase() === "projects" && <Projects></Projects>}
+            </div>
+        </div>
+    );
 }
 
 export default App;
